@@ -10,7 +10,7 @@
 
 **Ngưỡng detection/segmentation tạo JSON:** `0.35`. Ô so sánh detection chạy thêm `0.20` và `0.60`, đúng notebook.
 
-**Thay đổi so với notebook nguồn:** thực thi các ô Python gốc bằng `scripts/run_day1_local.py` trên CPU cục bộ. Bước `%pip` được thực hiện trước trong môi trường `.venv`; dùng backend Matplotlib `Agg` để lưu PNG; thay thao tác upload/download Colab bằng đọc/ghi file trên máy. Không sửa notebook nguồn, checkpoint, ảnh, mã suy luận, ngưỡng hay mã validation. Đây là thay đổi môi trường so với luồng Colab của lớp, được ghi rõ để người chấm đối chiếu.
+**Thay đổi so với notebook nguồn:** thực thi các ô Python gốc bằng `scripts/run_day1_local.py` trên CPU cục bộ. Bước `%pip` được thực hiện trước trong môi trường `.venv`; dùng backend Matplotlib `Agg` để lưu PNG; thay thao tác upload/download Colab bằng đọc/ghi file trên máy. Không sửa notebook nguồn, checkpoint, ảnh, mã suy luận, ngưỡng hay mã validation. 
 
 **Dữ liệu và tái lập:** chỉ sử dụng ba ảnh COCO cố định: `traffic` (210273, 640 × 428), `kitchen` (397133, 640 × 427), `dining` (166918). Cả ba checkpoint và ba ảnh đều vượt qua kiểm tra SHA-256 trước khi suy luận. Hash checkpoint có trong từng record JSON; nguồn ảnh và giấy phép có trong [IMAGE_ATTRIBUTION.md](day1_lab_outputs/IMAGE_ATTRIBUTION.md). Nhật ký thực thi và thông tin môi trường được lưu riêng ở `outputs/day1_execution.log` và `outputs/day1_run_metadata.json` của workspace.
 
@@ -111,10 +111,3 @@ Guideline cần được thống nhất trước khi tạo ground truth. Ground 
 - [x] Đã đối chiếu JSON với ba PNG và ghi nhận điểm mơ hồ/lỗi cần kiểm tra.
 - [x] Không thêm họ tên, MSSV hoặc dữ liệu cá nhân vào báo cáo/output; nguồn tác giả ảnh được giữ theo yêu cầu attribution.
 
-**Cần thực hiện khi nộp bài:**
-
-- [ ] Upload trực tiếp `REPORT.md` và thư mục `day1_lab_outputs/` vào `report/` trên repository GitHub bài làm, rồi commit.
-- [ ] Mở lại `report/` trên GitHub, kiểm tra đủ file và hiển thị được ba ảnh.
-- [ ] Nộp **link repository** trên LMS theo thông báo của lớp.
-
-Báo cáo này ghi nhận kết quả chạy trên máy. Các mục GitHub/LMS được để trống vì chưa thực hiện trong lần chạy này.
